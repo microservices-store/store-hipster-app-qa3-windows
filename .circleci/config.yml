@@ -13,7 +13,7 @@ jobs:
           POSTGRES_PASSWORD: ""
     steps:
       - checkout
-      - run: mkdir test-reports
+      - run: mkdir -p test-reports/selenium
       - run:
           name: Download Selenium
           command: |
@@ -38,7 +38,7 @@ jobs:
       - run:
           command: |
             . venv/bin/activate
-            python3 selenium_tests.py > test-reports/TestResult.xml
+            python3 selenium_tests.py > test-reports/selenium/results.xml
       - store_artifacts:
           path: test-reports/
           destination: tr1
