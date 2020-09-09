@@ -14,7 +14,7 @@ driver = webdriver.Chrome()
 # Open provided link in a browser window using the driver
 driver.get("http://34.67.97.28/")
 
-print("<?xml version=\"1.0\" encoding=\"UFT-8\"?>")
+print("<?xml version=\"1.0\" ?>")
 print("<TestReport time=\"" + dt_string + "\">")
 print("<TestCases>")
 print("<TestCase id=\"001\"/>")
